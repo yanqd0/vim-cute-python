@@ -27,9 +27,12 @@ syntax match pyNiceKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 
 syntax keyword pyNiceStatement lambda conceal cchar=λ
 
+syntax keyword pyNiceRepeat for conceal cchar=∀
+
 hi link pyNiceOperator Operator
 hi link pyNiceStatement Statement
 hi link pyNiceKeyword Keyword
+hi link pyNiceRepeat Repeat
 hi! link Conceal Operator
 
 setlocal conceallevel=1
