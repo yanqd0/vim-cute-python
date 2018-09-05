@@ -22,7 +22,7 @@ syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≡
 syntax match pyNiceOperator "!=" conceal cchar=≢
 
 
-syntax keyword pyNiceOperator sum conceal cchar=∑
+syntax keyword pyNiceBuiltin sum conceal cchar=∑
 syntax keyword pyNiceBuiltin all conceal cchar=∀
 syntax keyword pyNiceBuiltin any conceal cchar=∃
 syntax match pyNiceOperator "\<\%(math\.\)\?sqrt\>" conceal cchar=√
@@ -30,6 +30,7 @@ syntax match pyNiceKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 syntax match pyNiceOperator "\<\%(math\.\|\)ceil\>" conceal cchar=⌈
 syntax match pyNiceOperator "\<\%(math\.\|\)floor\>" conceal cchar=⌊
 syntax match pyNiceOperator "\<\%(math\.\)\?exp\>" conceal cchar=ℯ
+syntax match pyNiceOperator "\<\%(math\.\)\?inf\>" conceal cchar=∞
 
 syntax keyword pyNiceStatement int conceal cchar=ℤ
 syntax keyword pyNiceStatement float conceal cchar=ℝ
@@ -42,13 +43,14 @@ syntax match pyNiceOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
 syntax match pyNiceOperator "\( \|\)\*\*\( \|\)3\>" conceal cchar=³
 syntax match pyNiceOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
 
-" Your background, and taste, may affect whether you like # for cardinality ;)
-syntax keyword pyNiceBuiltin len conceal cchar=#
-
 syntax keyword pyNiceStatement lambda conceal cchar=λ
 syntax keyword pyNiceStatement None conceal cchar=∅
-
+syntax keyword pyNiceKeyword True conceal cchar=𝕋
+syntax keyword pyNiceKeyword False conceal cchar=𝔽
 syntax keyword pyNiceRepeat for conceal cchar=∀
+
+syntax match pyNiceOperator "\<\%(random\.\)\?random\>" conceal cchar=🎲
+syntax match pyNiceOperator "\<\%(time\.\)\?time\>" conceal cchar=⏰
 
 hi link pyNiceOperator Operator
 hi link pyNiceStatement Statement
